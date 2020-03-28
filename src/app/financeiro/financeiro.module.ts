@@ -4,14 +4,14 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CartaoVirtualPage } from './cartao-virtual.page';
+import { FinanceiroPage } from './financeiro.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule
-  ],
-  declarations: [CartaoVirtualPage]
+    ],
+  declarations: [FinanceiroPage]
 })
-export class CartaoVirtualPageModule {}
+export class FinanceiroPageModule {}

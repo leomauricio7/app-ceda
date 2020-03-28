@@ -4,16 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VouchesPageRoutingModule } from './vouches-routing.module';
-
 import { VouchesPage } from './vouches.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
-    VouchesPageRoutingModule
+    IonicModule
   ],
   declarations: [VouchesPage]
 })
