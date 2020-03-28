@@ -4,13 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
+import { CartaoVirtualPageRoutingModule } from './cartao-virtual-routing.module';
+
 import { CartaoVirtualPage } from './cartao-virtual.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule
+    IonicModule,
+    CartaoVirtualPageRoutingModule
   ],
   declarations: [CartaoVirtualPage]
 })

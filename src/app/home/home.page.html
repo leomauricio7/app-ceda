@@ -19,13 +19,13 @@
       <ion-row>
         <ion-col size="12">
           <div class="redes-sociais">
-            <div>
+            <div (click)="redeSocial('facebook')">
               <img src="assets/image/facebook.png" alt="facebook">
             </div>
-            <div>
+            <div (click)="redeSocial('instagram')">
               <img src="assets/image/instagram.png" alt="instagram">
             </div>
-            <div>
+            <div (click)="redeSocial('whatsapp')">
               <img src="assets/image/whatsapp.png" alt="whatsapp">
             </div>
           </div>
@@ -34,13 +34,13 @@
       
       <ion-row>
         <ion-col>
-          <div class="div-botao">
+          <div class="div-botao" routerLink="/tabs/cartao-virtual" routerDirection="forward">
             <img src="assets/image/cartao.png" alt="cartao ceda+">
           </div>
           <p>Cartão CEDA+</p>
         </ion-col>
         <ion-col>
-          <div class="div-botao">
+          <div class="div-botao" routerLink="/tabs/agendamentos" routerDirection="forward">
             <img src="assets/image/consultas.png" alt="consultas">
           </div>
           <p>Consultas</p>
@@ -49,13 +49,13 @@
 
       <ion-row>
         <ion-col>
-          <div class="div-botao">
+          <div class="div-botao" routerLink="/tabs/vouches" routerDirection="forward">
             <img src="assets/image/cupom.png" alt="vouches">
           </div>
           <p>Vouches</p>
         </ion-col>
         <ion-col>
-          <div class="div-botao">
+          <div class="div-botao" routerLink="/tabs/financeiro" routerDirection="forward">
             <img src="assets/image/procurar.png" alt="financeiro">
           </div>
           <p>Financeiro</p>

@@ -6,6 +6,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // background-image: url("../../assets/image/background.jpg");
+  // background-size: 800px;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-position: bottom;
 }
 .redes-sociais{
   display: flex;
@@ -23,8 +28,8 @@ ion-title{
   padding: 10px;
 }
 
-.toolbar-header{
-  border-bottom: 3px solid #b7b7b7!important;
+ion-toolbar{
+  border-bottom: 3px solid #ffca22!important;
 }
 p{
   text-align: center;

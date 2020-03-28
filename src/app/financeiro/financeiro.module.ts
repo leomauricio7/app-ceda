@@ -4,14 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
+import { FinanceiroPageRoutingModule } from './financeiro-routing.module';
+
 import { FinanceiroPage } from './financeiro.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule
-    ],
+    IonicModule,
+    FinanceiroPageRoutingModule
+  ],
   declarations: [FinanceiroPage]
 })
 export class FinanceiroPageModule {}
