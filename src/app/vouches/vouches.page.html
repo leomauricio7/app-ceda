@@ -7,6 +7,32 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.5" pullMin="100" pullMax="200">
+    <ion-refresher-content
+      pullingText="Arraste para atualizar!"
+      refreshingText="Atualizando..."></ion-refresher-content>
+  </ion-refresher>
 
+  <div class="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Histórico de Vouches</ion-card-subtitle>
+        <ion-card-title>Vouches</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class="card-vouches"*ngFor="let vouche of vouches">
+      <ion-card-content>
+        <ion-item>
+          <img src="assets/image/cupom.png" alt="{{vouche.nome}}" slot="start" width="50">
+          <div>
+            <p><strong>Nome: </strong>{{vouche.nome}}</p>
+            <p><strong>Descrição: </strong>{{vouche.descricao}}</p>
+          </div>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
 </ion-content>
