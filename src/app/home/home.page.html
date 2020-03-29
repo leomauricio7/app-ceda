@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="light" class="toolbar-header">
+  <ion-toolbar color="primary" class="toolbar-header">
     <ion-title>
-      <img src="assets/image/logo.png" alt="clinica ceda" width="200px">
+      <img src="assets/image/logo-branca.png" alt="clinica ceda" width="200px">
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button size="large" color="primary">
+      <ion-button (click)="profile()">
         <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
       </ion-button>
-      <!-- <ion-menu-button autoHide="false"></ion-menu-button> -->
+      <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>

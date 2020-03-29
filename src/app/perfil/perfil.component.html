@@ -1,0 +1,17 @@
+<ion-content>
+  <ion-list>
+    <ion-list-header lines="full">
+      <ion-label><strong>Nome: </strong> {{data.nome}}</ion-label>
+      <ion-label><strong>Nº Prontuário: </strong> {{data.codigo}}</ion-label>
+    </ion-list-header>
+
+    <ion-item (click)="logout()">
+      <ion-icon name="log-out-outline" slot="start"></ion-icon>
+         Deslogar
+    </ion-item>
+    <ion-item (click)="close()">
+      <ion-icon name="close-outline" slot="start"></ion-icon>
+         Fechar Janela
+    </ion-item>
+  </ion-list>
+</ion-content>

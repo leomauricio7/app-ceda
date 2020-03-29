@@ -1,3 +1,21 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- type = reveal, push, overlay -->
+  <ion-menu side="end" type="reveal" menuId="first" contentId="content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Ferramentas</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list *ngFor="let pages of navigate">
+      <ion-menu-toggle auto-hide="true">
+        <ion-item [routerLink]="pages.url" [routerDirection]="pages.direction">
+            <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+               {{pages.title}} 
+        </ion-item>
+      </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content"></ion-router-outlet>
 </ion-app>

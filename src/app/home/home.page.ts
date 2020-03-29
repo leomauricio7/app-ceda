@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { PerfilComponent } from '../perfil/perfil.component';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public popoverController: PopoverController) {}
 
   public redeSocial(page){
     switch(page){
@@ -23,7 +25,18 @@ export class HomePage {
     }
   }
 
-  public router(page){
-    
-  }
+  async profile(ev: any){
+    console.log('click')
+      const popover = await this.popoverController.create({
+        component: PerfilComponent,
+        event: ev,
+        translucent: true,
+        componentProps: { data: {
+          nome: 'Leoanardo Mauricio',
+          codigo: '121213233'
+        } }
+      });
+      return await popover.present();
+    }
+
 }
