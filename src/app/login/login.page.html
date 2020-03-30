@@ -1,3 +1,35 @@
 <ion-content>
-
+    <div class="container">
+        <div class="header">
+            <img src="assets/image/logo-2.png" alt="ceda" width="200">
+        </div>
+        <hr>
+        <!-- <h1>Faça seu login</h1> -->
+        <form padding #form="ngForm" (submit)="login(form)"> 
+            <ion-item>
+                <ion-label position="floating">Usuário</ion-label>
+                <ion-input
+                    ngModel
+                    name="user"
+                    type="text"
+                    clearInput
+                    autofocus="true"
+                    clearOnEdit="false"></ion-input>
+            </ion-item>
+            <h6 *ngIf="erroUser"class="error">{{erroMsgUser}}</h6>
+            <ion-item>
+                <ion-label position="floating">Senha</ion-label>
+                <ion-input 
+                    ngModel
+                    name="password"
+                    type="password"
+                    clearInput clearOnEdit="false"></ion-input>
+            </ion-item>
+            <h6 *ngIf="erroPassword"class="error">{{erroMsgPassword}}</h6>
+            <br>
+            <ion-button class="btn" color="primary" type="submit" expand="block" shape="round">
+                Entrar
+            </ion-button>
+        </form>
+    </div>
 </ion-content>

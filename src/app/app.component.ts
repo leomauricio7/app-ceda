@@ -40,10 +40,11 @@ export class AppComponent {
       },
       {
         title : "Sair",
-        url   : "/contacts",
+        url   : "/login",
         icon  : "log-out-outline",
-        direction: "forward"
+        direction: "root"
       },
     ]
   }
+  
 }

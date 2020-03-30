@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController, NavParams } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -10,7 +11,8 @@ export class PerfilComponent implements OnInit {
   data;
   constructor(
     private navParams: NavParams,
-    private popoverController: PopoverController
+    private popoverController: PopoverController,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -19,9 +21,10 @@ export class PerfilComponent implements OnInit {
   }
 
   logout(){
-
+    this.close();
+    this.router.navigate(['/login'])
   }
-
+  
   close() {
     this.popoverController.dismiss();
   }
