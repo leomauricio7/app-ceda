@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm, Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-login',
@@ -15,10 +17,16 @@ export class LoginPage implements OnInit {
   erroUser=false;
   erroPassword=false;
 
-  constructor(private router: Router,
-    public loadingController: LoadingController) {}
+  constructor(
+    private router: Router,
+    public loadingController: LoadingController,
+    private storage: Storage
+    ) {
+      this.storage.clear();
+    }
 
   ngOnInit() {
+    this.storage.clear();
   }
 
   login(form: NgForm){
@@ -40,7 +48,8 @@ export class LoginPage implements OnInit {
     this.load();
     setTimeout(() => {
       this.loadingController.dismiss();
-      this.router.navigate(['/tabs/home']);
+      this.storage.set('isLogado', true);
+      this.router.navigate(['/tabs']);
     }, 2000);
     console.log('logado com sucesso.')
 
